@@ -1,230 +1,405 @@
 
 <?php /*template name: Inicio*/
  get_header();?>
+<script src="<?php bloginfo("template_url");?>/main.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-  
+ <div class="banner">
+<div class="capa"></div>
+<div class="info">
+</div>
+</div>
 
-		  <div class="banner">
-    <div class="capa"></div>
-    <div class="info">
-      <h1>Bienvenidos a SLee Dw</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere alias nobis debitis provident ut odio aperiam quibusdam. Amet, neque, illo.</p>
-      <a href="https://www.youtube.com/"></a>
+<div class="container">
+<div class="row">
+  <div class="col-sm-12">
+      <h2 id="recetass">.</h2>
+      <h2 class="comidarecomendadas">"Recetas"
+      </h2>
     </div>
-  </div>
 
-  
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-          <h2 id="comidarecomendada">.</h2>
-          <h2 class="comidarecomendadas">"COMIDAS RECOMENDADAS"</h2>
-        </div>
-      <div class="col-sm-6"> 
 
-        <p class="latino"><img src="<?php the_field('imagen_1')?>" width="100%"></p>
+    <?php $caja1 = get_field("caja_1"); ?>
+  <div class="col-sm-6"> 
 
-      </div>
-
-      <div class="col-sm-6">
-        <h2 class="comidalatin"><?php the_field('titulo_1')?></h2>
-        <p class="resumenlatin"><?php the_field('texto_1')?>
-        <br>
-        <a class="boton1" href="#"><?php the_field('boton_1')?></a></p>
-
-      </div>
-
-       <div class="col-sm-6"> 
-
-        <h2 class="comidalatin">Comida Europea</h2>
-        <p class="resumenlatin">Son muchos los países europeos y abundante la variedad gastronómica que se puede encontrar en cada uno de ellos, con sus alimentos, recetas típicas y tradicionales. Dentro de muchos países, dependiendo de la región, el modo de preparar la misma receta puede variar enormemente. Igual ocurre en cada país europeo, aunque se trate de la misma receta, cada país tiene su propio sello y firma gastronómica. 
-        <br>
-        <a class="boton1" href="#">Ver mas</a></p>
-
-      </div>
-
-      <div class="col-sm-6">
-
-        <p class="latino"><img src="https://viaturi.com/wp-content/uploads/2017/06/platos-y-comidas-europeas.jpg" width="100%"></p>
-
-      </div>
-
-      <div class="row">
-      <div class="col-sm-6"> 
-
-        <p class="latino"><img src="https://i.blogs.es/346716/comida-chian/450_1000.jpg" width="100% "></p>
-
-      </div>
-
-      <div class="col-sm-6">
-
-        <h2 class="comidalatin">Comida Asiatica</h2>
-        <p class="resumenlatin">Así, la dieta oriental o asiática abarca la cocina china, japonesa, india y tailandesa, y a pesar de que todas poseen su propia marca, comparten varias características como la abundancia de legumbres y arroz, de pescados, verduras y el poco uso de las carnes y de los dulces. 
-        <br>
-        <a class="boton1" href="#">Ver mas</a></p>
-
-      </div>
-
+    <p class="latino"><img src="<?php echo $caja1['imagen']; ?>" width="50%"></p>
 
   </div>
+
+  <div class="col-sm-6">
+    <h2 class="comidalatin"><?php echo $caja1['titulo']; ?></h2>
+    <p class="resumenlatin"><?php echo $caja1['texto']; ?>
+    <br>
+    <a class="boton1" href="<?php echo $caja1['boton']; ?>">Ver mas</a></p>
+  </div>
+
+
+
+
+
+  <?php $caja2 = get_field("caja_2"); ?>
+   <div class="col-sm-6"> 
+
+    <h2 class="comidalatin"><?php echo $caja2['titulo']; ?></h2>
+    <p class="resumenlatin"><?php echo $caja2['texto']; ?>
+    <br>
+    <a class="boton1" href="<?php echo $caja2['boton']; ?>">Ver mas</a></p>
+
+  </div>
+
+  <div class="col-sm-6">
+
+    <p class="latino"><img src="<?php echo $caja2['imagen']; ?>" width="50%"></p>
+
+  </div>
+
+
+
+
+
+
+  <div class="row">
+  <?php $caja3 = get_field("caja_3"); ?>
+  <div class="col-sm-6"> 
+
+    <p class="latino"><img src="<?php echo $caja3['imagen']; ?>" width="50% "></p>
+
+  </div>
+
+  <div class="col-sm-6">
+
+    <h2 class="comidalatin"><?php echo $caja3['titulo']; ?></h2>
+    <p class="resumenlatin"><?php echo $caja3['texto']; ?> 
+    <br>
+    <a class="boton1" href="<?php echo $caja2['boton']; ?>">Ver mas</a></p>
+
+  </div>
+
+</div>
 </div>
 
 
 
-<div class="container">
-        <div class="row">
-            <div class="col s12">
-                
-                <p id="postres"><h1 class="center-align titulo">Postres</h1></p>
 
-                <div class="carousel center-align">
-                    <div class="carousel-item">
-                        <h2 class="subtitulo">Donas</h2>
-                        <div class="linea-division"></div>
-                        <p class="sabor">Glaseadas</p>
-                        <a class="carr" href="#">Ver mas</a>
-                        <img src="<?php bloginfo("template_url");?>/img/dona-01.jpg" alt="">
+
+<div class="text">
+     <h1>Carousel Responsive</h1>
+     <div class="row">
+        <div class="col-sm-12">
+            <a href="./listado.html"><h2 class="masrecetas2">"Más recetas" </h2></a>
+        </div>
+    </div>
+ <p id="postres">.</p>
+ <div class="col-sm-12"><h2 class="postres">Postres</h2></div>
+ <div class="products_body center">
+     <div class="wrapper">
+         <div class="container">
+             <img class="top" src="<?php bloginfo("template_url");?>/img/dona-01.jpg" alt="">
+             <div class="bottom">
+                 <div class="left">
+                     <div class="details">
+                         <h2 class="txt_products">Dona</h2>
+                         <p>Con capa de vainilla</p>
+                     </div>
+                     <div class="buy">
+                         <a href="#">
+                             <i class="fas fa-cart-plus"></i>
+                         </a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="inside">
+             <div class="icon">
+                 <i class="far fa-eye"></i>
+             </div>
+             <div class="contents">
+                 <h1>Ingredientes <br></h1>
+                 <p>-120ml leche, tibia (40 °C)<br>
+                    -100g azúcar en polvo, dividido<br>
+                    -1 paquete (2 ¼ cucharaditas) levadura seca activa<br>
+                    -1 grande huevo<br>
+                    -2 cucharadas agua<br>
+                    -1 cucharadita extracto de vainilla<br>
+                    -450g harina, más para espolvorear<br>
+                    -1 cucharadita sal<br>
+                    -60g mantequilla sin sal, derretida<br>
+                    -Según se requiera aceite, para engrasar<br>
+                    -Para el glaseado de vainilla<br>
+                    -1 cucharadita jarabe de oro<br>
+                    -120g azúcar glasé<br>
+                    -1 cucharada agua<br>
+                    -¼ de cucharadita extracto de vainilla<br></p>
+             </div>
+         </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+            <img class="top" src="<?php bloginfo("template_url");?>/img/dona-02.jpg" alt="">
+            <div class="bottom">
+                <div class="left">
+                    <div class="details">
+                        <h2 class="txt_products">Dona</h2>
+                        <p>Con capa de chocolate</p>
                     </div>
-
-                    <div class="carousel-item">
-                        <h2 class="subtitulo">Pastel</h2>
-                        <div class="linea-division"></div>
-                        <p class="sabor">Chocolate</p>
-                        <a class="carr" href="#">Ver mas</a>
-                        <img src="<?php bloginfo("template_url");?>/img/pastel-01.jpg" alt="">
-                    </div>
-
-                    <div class="carousel-item">
-                        <h2 class="subtitulo">Donas</h2>
-                        <div class="linea-division"></div>
-                        <p class="sabor">Glaseadas</p>
-                        <a class="carr" href="#">Ver mas</a>
-                        <img src="<?php bloginfo("template_url");?>/img/dona-02.jpg" alt="">
-                    </div>
-
-                    <div class="carousel-item">
-                        <h2 class="subtitulo">Pastel</h2>
-                        <div class="linea-division"></div>
-                        <p class="sabor">Chocolate</p>
-                        <a class="carr" href="#">Ver mas</a>
-                        <img src="<?php bloginfo("template_url");?>/img/pastel-02.jpg" alt="">
-                    </div>
-
-                    <div class="carousel-item">
-                        <h2 class="subtitulo">Muffin</h2>
-                        <div class="linea-division"></div>
-                        <p class="sabor">Chocolate</p>
-                        <a class="carr" href="#">Ver mas</a>
-                        <img src="<?php bloginfo("template_url");?>/img/muffins-01.jpg" alt="">
-                    </div>
-
-                    <div class="carousel-item">
-                        <h2 class="subtitulo">Muffin</h2>
-                        <div class="linea-division"></div>
-                        <p class="sabor">Glaseadas</p>
-                        <a class="carr" href="#">Ver mas</a>
-                        <img src="<?php bloginfo("template_url");?>/img/muffins-02.jpg" alt="">
-                    </div>
-
-                    <div class="carousel-item">
-                        <h2 class="subtitulo">Muffin</h2>
-                        <div class="linea-division"></div>
-                        <p class="sabor">Chispas de chocolate</p>
-                        <a class="carr" href="#">Ver mas</a>
-                        <img src="<?php bloginfo("template_url");?>/img/muffins-03.jpg" alt="">
+                    <div class="buy">
+                        <a href="#">
+                            <i class="fas fa-cart-plus"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="inside">
+            <div class="icon">
+                <i class="far fa-eye"></i>
+            </div>
+            <div class="contents">
+                <h1>Ingredientes</h1>
+                <p>
+                  -2 Piezas Huevo <br>
+                  -3 Cucharadas Azúcar <br>
+                  -2 Cucharadas Esencia de vainilla <br>
+                  -2 Cucharadas Esencia de naranja <br>
+                  -1/2 Barra Mantequilla a temperatura ambiente (90 g) <br>
+                  -3 1/2 Tazas Harina para hot cakes <br>  
+                  -2 Cucharadas Polvo para hornear <br>
+                  -1/4 Taza Harina de trigo la necesaria para espolvorear <br>
+                  -1 Taza Aceite de maíz para freír <br>
+                  -1/3 Taza Media Crema NESTLÉ® <br>
+                  -1 Barra Chocolate para mesa ABUELITA® (200 g) <br>
+                </p>
+            </div>
+        </div>
+   </div>
 
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-   
-    <!-- JS Main -->
-    <script src="<?php bloginfo("template_url");?>/js/main.js"></script>
-
+   <div class="wrapper">
     <div class="container">
+        <img class="top" src="<?php bloginfo("template_url");?>/img/muffins-03.jpg" alt="">
+        <div class="bottom">
+            <div class="left">
+                <div class="details">
+                    <h2 class="txt_products">Muffins</h2>
+                    <p>Con chispas de chocolate</p>
+                </div>
+                <div class="buy">
+                    <a href="#">
+                        <i class="fas fa-cart-plus"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="inside">
+        <div class="icon">
+            <i class="far fa-eye"></i>
+        </div>
+        <div class="contents">
+            <h1>Ingredientes</h1>
+            <p>
+              -6 Cucharadas de Nestle Chocolatería Chispas <br>
+              -1 Taza de Harina<br>
+              -1/2 Taza de Azúcar<br>
+              -2 Unidade de Huevo<br>
+              -3 Cucharadas de Aceite Vegetal<br>
+              -1/2 Cucharadita de Esencia de Vainilla<br>
+              -1 Cucharadita de Polvo de Hornear<br>
+              -3 Cucharadas de Agua Caliente
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+<div class="container">
+    <img class="top" src="<?php bloginfo("template_url");?>/img/pastel-02.jpg" alt="">
+    <div class="bottom">
+        <div class="left">
+            <div class="details">
+                <h2 class="txt_products">Pastel</h2>
+                <p>Tres leches</p>
+            </div>
+            <div class="buy">
+                <a href="#">
+                    <i class="fas fa-cart-plus"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="inside">
+    <div class="icon">
+        <i class="far fa-eye"></i>
+    </div>
+    <div class="contents">
+        <h1>Ingredientes</h1>
+        <p>
+          -200 gramos de mantequilla <br>
+          -5 unidades de huevos<br>
+          -1 taza de azúcar (200 gramos)<br>
+          -2 tazas de harina (280 gramos)<br>
+          -2 cucharadas de postre de polvo para hornear <br>
+          -1 taza de leche (240 mililitros)<br><br>
+
+          Para el baño o cubierta de tres leches: <br><br>
+          -1 lata de leche clavel (evaporada)<br>
+          -1 lata de leche condensada<br>
+          -1 lata de media crema néstle<br>
+          -¼ taza de brandy<br>
+          -¼ taza de leche (60 mililitros)
+        </p>
+    </div>
+</div>
+</div>
+
+<div class="wrapper">
+<div class="container">
+    <img class="top" src="<?php bloginfo("template_url");?>/img/muffins-01.jpg" alt="">
+    <div class="bottom">
+        <div class="left">
+            <div class="details">
+                <h2 class="txt_products">Muffins</h2>
+                <p>Con chocolate</p>
+            </div>
+            <div class="buy">
+                <a href="#">
+                    <i class="fas fa-cart-plus"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="inside">
+    <div class="icon">
+        <i class="far fa-eye"></i>
+    </div>
+    <div class="contents">
+        <h1>Ingredientes</h1>
+        <p>
+          -300 gr. harina de trigo <br>
+          -80 gr. cacao puro, sin azúcar<br>
+          -1 y ½ cdita. levadura química<br>
+          -¼ cdita. sal<br>
+          -250 gr. azúcar<br>
+          -100 gr. mantequilla <br>
+          -250 ml. leche entera <br>
+          -El zumo de ½ limón <br>
+          -2 huevos <br>
+          -150 gr. chocolate 70% cacao
+        </p>
+    </div>
+</div>
+</div>
+ </div>
+
+
+
+
+
+
+
+ <?php $aprendeacocinar = get_field("aprende_a_cocinar"); ?>
+
+<div class="container">
+<div class="row">
+  <div class="col-sm-12">
+        <h2 id="aprendeacocinar">.</h2>
+        <h2 class="cocina"><?php the_field('titulo_aprende'); ?></h2>
+      </div>
+  <div class="col-sm-6"> 
+
+    <h2 class="comidalatin"><?php echo $aprendeacocinar['titulo']; ?></h2>
+    <p class="resumenlatin"><?php echo $aprendeacocinar['texto']; ?>
+    <br>
+    <a class="boton1" href="<?php echo $aprendeacocinar['boton']; ?>">Ver mas</a></p>
+
+
+  </div>
+
+  <div class="col-sm-6">
+
+    <p class="latino"><img src="<?php echo $aprendeacocinar['imagen']; ?>" width="100%"></p>
+
+  </div>
+
+
+
+
+
+
+  <div class="container">
     <div class="row">
       <div class="col-sm-12">
-            <h2 id="aprendeacocinar">.</h2>
-            <h2 class="cocina"> "APRENDE A COCINAR" </h2>
-          </div>
-      <div class="col-sm-6"> 
-        <h2 class="comidalatin">Aprender y descubrir</h2>
-        <p class="resumenlatin">Una lección para consumir productos de manera consciente y responsable. Acceder a ingredientes y platos de diferentes lugares del mundo es una manera práctica de aprender y descubrir tradiciones y costumbres de todas las culturas, porque la cocina es la protagonista de todas ellas.
+        <h2 id="comidarecomendada">   </h2>
+      </div>
+
+
+
+      <h2 class="comidarecomendadas"> <?php the_field('comidas_recomendadas'); ?></h2>
+      <div class="col-sm-4">
+        <div class="botar">
+
+<?php $comida1 = get_field("comida_1"); ?>
+        <img class="imgtitulo" src="<?php echo $comida1['imagen']; ?>" width="100%">
+        <h2 class="aprendetitulo"><?php echo $comida1['titulo']; ?></h2>
+        <p class="resutitulo"><?php echo $comida1['texto']; ?>
         <br>
-        <a class="boton1" href="#">Ver mas</a></p>
-
-
-      </div>
-
-      <div class="col-sm-6">
-
-        <p class="latino"><img src="https://dam.cocinafacil.com.mx/wp-content/uploads/2020/08/cocinar-mas-rapido.jpg" width="100%"></p>
-
-      </div>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <h2 id="recetass"> "RECETAS" </h2>
-          </div>
-          <div class="col-sm-4">
-            <div class="botar">
-            <img class="imgtitulo" src="https://t1.rg.ltmcdn.com/es/posts/7/4/1/ceviche_peruano_18147_orig.jpg" width="100%">
-            <h2 class="aprendetitulo">Ceviche peruano de corvina</h2>
-            <p class="resutitulo">El ceviche, cebiche o seviche es un plato originario de Perú. Consiste en macerar el pescado o marisco sumergido en lima y servido con su jugo bien…
-            <br>
-            <a class="boton1" href="#">Ver mas</a></p></p>
-            </div>
-          </div>
-
-          <div class="col-sm-4">
-            <div class="botar">
-            <h2 class="aprendetitulos">Causa limeña</h2>
-            <p class="resutitulo">Un plato de gran tradición y más apreciado en Perú es la causa limeña. Un entrante frío donde el ají, la patata y el limón son los protagonistas. Se…
-            <br>
-            <a class="boton1" href="#">Ver mas</a></p>
-            </p>
-            
-            <img class="imgtitulos" src="https://recetascocinaperuana.com/wp-content/uploads/2021/06/causa-limena.jpg" width="100%">
-            </div>
-          </div>
-
-          <div class="col-sm-4">
-            <div class="botar">
-            <img class="imgtitulo" src="https://www.comedera.com/wp-content/uploads/2022/03/Anticucho-shutterstock_185287433.jpg" width="100%">
-            <h2 class="aprendetitulo">Anticucho peruanos</h2>
-            <p class="resutitulo">Uno de los platos típicos que solemos encontrar en restaurantes peruanos y puestos de comida callejera, son los anticuchos, unas brochetas de corazón…
-            <br><a class="boton1" href="#">Ver mas</a></p></p>
-
-            </div>
-          </div>
+        <a class="boton1" href="<?php echo $comida1['boton']; ?>">Ver mas</a></p></p>
         </div>
       </div>
 
-      <div class="container">
-    <div class="row">
-      <div class="col-sm-6"> 
 
-        <p class="latino3"><img src="https://res.cloudinary.com/restaurant-pe-v2/images/f_auto,q_auto/w_2560,h_1610/v1618512258/rest/rest.jpg" width="100%"></p>
 
-      </div>
 
-      <div class="col-sm-6">
-        <h2 class="comidalatin2" >Reseñas</h2>
-        <p class="resumenlatin">Excelente restaurante sin un solo pero. Ambiente selecto y tranquilo, servicio impresionante, Alta cocina con excelente presentación. Postres impresionantes. Correcta relación calidad precio.
+<?php $comida2 = get_field("comida_2"); ?>
+      <div class="col-sm-4">
+        <div class="botar">
+        <h2 class="aprendetitulos"><?php echo $comida2['titulo']; ?></h2>
+        <p class="resutitulo"><?php echo $comida2['texto']; ?> 
         <br>
-        <a class="boton1" href="#">Ver mas</a></p>
-
+        <a class="boton1" href="<?php echo $comida2['boton']; ?>">Ver mas</a></p>
+        </p>
+        
+        <img class="imgtitulos" src="<?php echo $comida2['imagen']; ?>" width="100%">
+        </div>
       </div>
 
+
+
+
+
+<?php $comida3 = get_field("comida_3"); ?>
+      <div class="col-sm-4">
+        <div class="botar">
+        <img class="imgtitulo" src="<?php echo $comida2['imagen']; ?>" width="100%">
+        <h2 class="aprendetitulo"><?php echo $comida2['titulo']; ?></h2>
+        <p class="resutitulo"><?php echo $comida2['texto']; ?>
+        <br><a class="boton1" href="<?php echo $comida2['boton']; ?>">Ver mas</a></p></p>
+
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+<div class="row">
+  <div class="col-sm-6"> 
+
+    <p class="latino3"><img src="https://res.cloudinary.com/restaurant-pe-v2/images/f_auto,q_auto/w_2560,h_1610/v1618512258/rest/rest.jpg" width="100%"></p>
+
+  </div>
+
+  <div class="col-sm-6">
+    <h2 class="comidalatin2" >Reseñas</h2>
+    <p class="resumenlatin">Excelente restaurante sin un solo pero. Ambiente selecto y tranquilo, servicio impresionante, Alta cocina con excelente presentación. Postres impresionantes. Correcta relación calidad precio.
+    <br>
+    <a class="boton1" href="./reseñas.html">Ver mas</a></p>
+
+  </div>
       <?php get_footer();?>
 
 
