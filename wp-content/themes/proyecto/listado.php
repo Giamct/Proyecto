@@ -25,7 +25,7 @@
             <h2 class="aprendetitulo"><?php the_title (); ?> </h2>
             <div class="resutitulo"> <?php the_excerpt (); ?></div>
             <br>
-            <a class="boton1" href="listadofinal4.html">Ver mas</a></p>
+            <a class="boton1" href="<?php the_permalink(); ?>">Ver mas</a></p>
             </div>
           </div>
 
