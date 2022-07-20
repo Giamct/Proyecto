@@ -88,7 +88,7 @@
      <h1>Carousel Responsive</h1>
      <div class="row">
         <div class="col-sm-12">
-            <a href="./listado.html"><h2 class="masrecetas2">"Más recetas" </h2></a>
+            <a href="<?php echo home_url('listado'); ?>"><h2 class="masrecetas2">"Más recetas" </h2></a>
         </div>
     </div>
  <p id="postres">.</p>
